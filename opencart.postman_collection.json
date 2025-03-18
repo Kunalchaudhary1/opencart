@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "6e002b22-60b7-4b09-a86b-33c43d6c40d1",
+		"name": "opencart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41645892"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"indra\",\r\n    \"lastname\": \"Doe\",\r\n    \"email\": \"indra.doe@example.com\",\r\n    \"telephone\": \"1234567890\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/register/"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"email\": \"indra.doe@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "get_customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/customers/"
+			},
+			"response": []
+		},
+		{
+			"name": "get specific_customer",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"John Updated\",\r\n    \"lastname\": \"Doe Updated\",\r\n    \"email\": \"john.updated@example.com\",\r\n    \"telephone\": \"9876543210\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/customers/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/customers/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Addresses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/customers/1/addresses/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Address to Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"kunal\",\r\n    \"lastname\": \"chaudhary\",\r\n    \"address_1\": \"123 Main St\",\r\n    \"city\": \"New York\",\r\n    \"postcode\": \"10001\",\r\n    \"country_id\": 1,\r\n    \"zone_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/customers/1/add_address/"
+			},
+			"response": []
+		},
+		{
+			"name": "catagory/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"5566\",\r\n    \"description\": \"Electronic products and gadgets\",\r\n    \"meta_title\": \"Electronics Store\",\r\n    \"meta_description\": \"Shop for the latest electronics and gadgets\",\r\n    \"meta_keyword\": \"electronics, gadgets, devices, technology\",\r\n    \"image\": \"catalog/electronics.jpg\",\r\n    \"parent_id\": 0,\r\n    \"column\": 1,\r\n    \"sort_order\": 0,\r\n    \"status\": 1,\r\n    \"language_id\": 1,\r\n    \"filters\": [\r\n        {\r\n            \"filter_id\": 1\r\n        },\r\n        {\r\n            \"filter_id\": 2\r\n        }\r\n    ],\r\n    \"layouts\": [\r\n        {\r\n            \"store_id\": 0,\r\n            \"layout_id\": 1\r\n        }\r\n    ],\r\n    \"stores\": [\r\n        {\r\n            \"store_id\": 0\r\n        }\r\n    ],\r\n    \"coupons\": [\r\n        {\r\n            \"coupon_id\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/categories/"
+			},
+			"response": []
+		},
+		{
+			"name": "catagory/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/category/delete/66/"
+			},
+			"response": []
+		},
+		{
+			"name": "get/product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/products/"
+			},
+			"response": []
+		},
+		{
+			"name": "get/one/product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "product/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"model\": \"Test Product 1123332\",\r\n    \"sku\": \"SKU123\",\r\n    \"price\": \"99.99\",\r\n    \"quantity\": 100,\r\n    \"status\": true,\r\n    \"image\": \"catalog/products/main.jpg\",\r\n    \"manufacturer_id\": 1,\r\n    \"stock_status_id\": 7,\r\n    \"tax_class_id\": 0,\r\n    \"descriptions\": [\r\n        {\r\n            \"language_id\": 1,\r\n            \"name\": \"TVVV\",\r\n            \"description\": \"TVVV\",\r\n            \"meta_title\": \"TVVV\",\r\n            \"meta_description\": \"TVVV\",\r\n            \"meta_keyword\": \"TVVV\"\r\n        }\r\n    ],\r\n    \"categories\": [\r\n        {\r\n            \"category_id\": 1111111111\r\n        },\r\n        {\r\n            \"category_id\": 222222222\r\n        }\r\n    ],\r\n    \"images\": [\r\n        {\r\n            \"image\": \"catalog/products/image1.jpg\",\r\n            \"sort_order\": 0\r\n        },\r\n        {\r\n            \"image\": \"catalog/products/image2.jpg\",\r\n            \"sort_order\": 1\r\n        }\r\n    ],\r\n    \"specials\": [\r\n        {\r\n            \"customer_group_id\": 1,\r\n            \"priority\": 0,\r\n            \"price\": \"89.99\",\r\n            \"date_start\": \"2024-01-01\",\r\n            \"date_end\": \"2024-12-31\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/products/"
+			},
+			"response": []
+		},
+		{
+			"name": "product/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"model\": \"Product Model 1111\",\r\n    \"sku\": \"SKU123\",\r\n    \"price\": 99.99,\r\n    \"stock_status_id\": 7,\r\n    \"manufacturer_id\": 1,\r\n    \"tax_class_id\": 9,\r\n    \r\n    \"descriptions\": [\r\n        {\r\n            \"language_id\": 1,\r\n            \"name\": \"9911\",\r\n            \"description\": \"Product Description  111111\",\r\n            \"meta_title\": \"Meta Title\",\r\n            \"meta_description\": \"Meta Description\",\r\n            \"meta_keyword\": \"meta, keywords\",\r\n            \"tag\": \"product, tags\"\r\n        }\r\n    ],\r\n    \r\n    \"images\": [\r\n        {\r\n            \"image\": \"catalog/products/image1.jpg\",\r\n            \"sort_order\": 0\r\n        },\r\n        {\r\n            \"image\": \"catalog/products/image2.jpg\",\r\n            \"sort_order\": 1\r\n        }\r\n    ],\r\n    \r\n    \"specials\": [\r\n        {\r\n            \"customer_group_id\": 1,\r\n            \"priority\": 0,\r\n            \"price\": 89.99,\r\n            \"date_start\": \"2024-01-01\",\r\n            \"date_end\": \"2024-12-31\"\r\n        }\r\n    ],\r\n    \r\n    \"discounts\": [\r\n        {\r\n            \"customer_group_id\": 1,\r\n            \"quantity\": 1001111,\r\n            \"priority\": 0,\r\n            \"price\": 50,\r\n            \"date_start\": \"2024-01-01\",\r\n            \"date_end\": \"2024-12-31\"\r\n        }\r\n    ],\r\n    \r\n    \"attributes\": [\r\n        {\r\n            \"attribute_id\": 1,\r\n            \"language_id\": 1,\r\n            \"text\": \"Attribute Value\"\r\n        }\r\n    ],\r\n    \r\n    \"options\": [\r\n        {\r\n            \"option_id\": 1,\r\n            \"required\": 1,\r\n            \"option_values\": [\r\n                {\r\n                    \"option_value_id\": 1,\r\n                    \"quantity\": 0,\r\n                    \"subtract\": 1,\r\n                    \"price\": 101111,\r\n                    \"price_prefix\": \"+\",\r\n                    \"points\": 0,\r\n                    \"points_prefix\": \"+\",\r\n                    \"weight\": 0,\r\n                    \"weight_prefix\": \"+\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/products/86/"
+			},
+			"response": []
+		},
+		{
+			"name": "product/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/products/85/"
+			},
+			"response": []
+		},
+		{
+			"name": "get article",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get article specific",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"topic_id\": 1,\r\n    \"author\": \"John Doe\",\r\n    \"descriptions\": [\r\n        {\r\n            \"language_id\": 1,\r\n            \"name\": \"Article Title\",\r\n            \"description\": \"Article content\",\r\n            \"meta_title\": \"Meta Title\",\r\n            \"meta_description\": \"Meta Description\",\r\n            \"meta_keyword\": \"keywords\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/articles/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Article",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n       \"author\": \"Updated Author\",\r\n       \"status\": 1,\r\n       \"descriptions\": [\r\n           {\r\n               \"language_id\": 1,\r\n               \"name\": \"Updated Title\",\r\n               \"description\": \"Updated content\",\r\n               \"meta_title\": \"Updated Meta Title\",\r\n               \"meta_description\": \"Updated Meta Description\",\r\n               \"meta_keyword\": \"updated,keywords\"\r\n           }\r\n       ]\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/articles/3/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/articles/4/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Article Comments",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\": \"Commenter Name\",\r\n    \"comment\": \"Comment text nice\",\r\n    \"rating\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/articles/1/add_comment/"
+			},
+			"response": []
+		},
+		{
+			"name": "Reply to Comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parent_comment_id\": 1,\r\n    \"author\": \"Reply Author\",\r\n    \"comment\": \"Reply text nice\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/articles/1/reply_to_comment/"
+			},
+			"response": []
+		}
+	]
+}
